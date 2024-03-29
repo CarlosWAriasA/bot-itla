@@ -45,7 +45,54 @@ def mensaje_quienes_somos(message):
     mensaje = read_message_from_file("quienes_somos.txt")
     botsito.reply_to(message, mensaje)
 
-# Otros manejadores de mensajes para comandos similares...
+# Manejador de mensajes para el comando /historia
+@botsito.message_handler(commands=["historia"])
+def mensaje_historia(message):
+    mensaje = read_message_from_file("historia.txt")
+
+    botsito.reply_to(message, mensaje)
+
+# Manejador de mensajes para el comando /rector
+@botsito.message_handler(commands=["rector"])
+def mensaje_rector(message):
+    mensaje = read_message_from_file("rector.txt")
+
+    botsito.reply_to(message, mensaje)
+
+# Manejador de mensajes para el comando /calidad_en_la_gestion
+@botsito.message_handler(commands=["calidad_en_la_gestion"])
+def mensaje_calidad(message):
+    mensaje = read_message_from_file("calidad_gestion.txt")
+
+    botsito.reply_to(message, mensaje)
+
+# Manejador de mensajes para el comando /mision
+@botsito.message_handler(commands=["mision"])
+def mensaje_mision(message):
+    mensaje = read_message_from_file("mision.txt")
+
+    botsito.reply_to(message, mensaje)
+
+# Manejador de mensajes para el comando /vision
+@botsito.message_handler(commands=["vision"])
+def mensaje_vision(message):
+    mensaje = read_message_from_file("vision.txt")
+
+    botsito.reply_to(message, mensaje)
+
+# Manejador de mensajes para el comando /valores
+@botsito.message_handler(commands=["valores"])
+def mensaje_valores(message):
+    mensaje = read_message_from_file("valores.txt")
+
+    botsito.reply_to(message, mensaje)
+
+# Manejador de mensajes para el comando /carreras_tecnologicas
+@botsito.message_handler(commands=["carreras_tecnologicas"])
+def mensaje_valores(message):
+    mensaje = read_message_from_file("carreras.txt")
+
+    botsito.reply_to(message, mensaje)
 
 # Manejador de mensajes para el comando /identidad_corporativa
 @botsito.message_handler(commands=["identidad_corporativa"])
