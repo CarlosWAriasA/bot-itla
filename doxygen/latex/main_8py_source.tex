@@ -1,0 +1,208 @@
+\doxysection{main.\+py}
+\hypertarget{main_8py_source}{}\label{main_8py_source}\index{C:/Users/carlo/PycharmProjects/telegram-\/bot/main.py@{C:/Users/carlo/PycharmProjects/telegram-\/bot/main.py}}
+\mbox{\hyperlink{main_8py}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00001}\mbox{\hyperlink{namespacemain}{00001}}\ \textcolor{keyword}{import}\ os\ \ \textcolor{comment}{\#\ Importa\ el\ mÃ³dulo\ os\ para\ interactuar\ con\ el\ sistema\ operativo.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00002}00002\ \textcolor{keyword}{from}\ dotenv\ \textcolor{keyword}{import}\ load\_dotenv\ \ \textcolor{comment}{\#\ Importa\ la\ funciÃ³n\ load\_dotenv\ del\ paquete\ dotenv\ para\ cargar\ variables\ de\ entorno.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00003}00003\ \textcolor{keyword}{import}\ telebot\ \ \textcolor{comment}{\#\ Importa\ la\ biblioteca\ telebot\ para\ interactuar\ con\ la\ API\ de\ Telegram.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00004}00004\ \textcolor{keyword}{from}\ file\_reader\ \textcolor{keyword}{import}\ read\_message\_from\_file\ \ \textcolor{comment}{\#\ Importa\ la\ funciÃ³n\ read\_message\_from\_file\ del\ mÃ³dulo\ file\_reader\ para\ leer\ mensajes\ desde\ archivos.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00006}00006\ \textcolor{comment}{\#\ Carga\ las\ variables\ de\ entorno\ desde\ el\ archivo\ .env}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00007}00007\ load\_dotenv()}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00009}00009\ \textcolor{comment}{\#\ Obtiene\ el\ token\ del\ bot\ desde\ las\ variables\ de\ entorno}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00010}\mbox{\hyperlink{namespacemain_a920d222def5913bc0fcd8e546bdd87e1}{00010}}\ TOKEN\ =\ os.getenv(\textcolor{stringliteral}{"{}TELEGRAM\_BOT\_TOKEN"{}})}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00012}00012\ \textcolor{comment}{\#\ Lista\ de\ comandos\ disponibles\ para\ el\ bot}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00013}\mbox{\hyperlink{namespacemain_a429c7b0e33d3f7342c8eb515a3364147}{00013}}\ available\_commands\ =\ [}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00014}00014\ \ \ \ \ \textcolor{stringliteral}{"{}/help"{}},\ \textcolor{stringliteral}{"{}/start"{}},\ \textcolor{stringliteral}{"{}/quienes\_somos"{}},\ \textcolor{stringliteral}{"{}/mision"{}},\ \textcolor{stringliteral}{"{}/vision"{}},}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00015}00015\ \ \ \ \ \textcolor{stringliteral}{"{}/valores"{}},\ \textcolor{stringliteral}{"{}/historia"{}},\ \textcolor{stringliteral}{"{}/rector"{}},\ \textcolor{stringliteral}{"{}/calidad\_en\_la\_gestion"{}},}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00016}00016\ \ \ \ \ \textcolor{stringliteral}{"{}/carreras\_tecnologicas"{}},\ \textcolor{stringliteral}{"{}/identidad\_corporativa"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00017}00017\ ]}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00019}00019\ \textcolor{comment}{\#\ Inicializa\ el\ bot\ con\ el\ token\ proporcionado}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00020}\mbox{\hyperlink{namespacemain_a353910903509b904c6921268e655eb38}{00020}}\ botsito\ =\ telebot.TeleBot(TOKEN)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00022}00022\ \textcolor{comment}{\#\ Manejador\ de\ mensajes\ para\ el\ comando\ /help\ y\ /start}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00023}00023\ \textcolor{comment}{\#\ Responde\ con\ un\ mensaje\ inicial\ que\ describe\ el\ bot\ y\ los\ comandos\ disponibles}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00024}00024\ \textcolor{preprocessor}{@botsito.message\_handler(commands=["{}help"{},\ "{}start"{}])}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00025}\mbox{\hyperlink{namespacemain_aa205e862124136520ba6478d205c6497}{00025}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacemain_aa205e862124136520ba6478d205c6497}{mensaje\_inicial}}(message):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00026}00026\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00027}00027\ \textcolor{stringliteral}{\ \ \ \ Manejador\ de\ mensajes\ para\ los\ comandos\ /help\ y\ /start.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00028}00028\ \textcolor{stringliteral}{\ \ \ \ Responde\ con\ un\ mensaje\ inicial\ que\ describe\ el\ bot\ y\ los\ comandos\ disponibles.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00029}00029\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00030}00030\ \ \ \ \ \textcolor{comment}{\#\ Mensaje\ inicial\ que\ se\ envÃ­a\ al\ usuario\ al\ iniciar\ o\ solicitar\ ayuda}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00031}00031\ \ \ \ \ initial\_message\ =\ \textcolor{stringliteral}{"{}Â¡Hola!\ Â¿CÃ³mo\ estÃ¡s?\(\backslash\)n\ \(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00032}00032\ \ \ \ \ initial\_message\ +=\ \textcolor{stringliteral}{"{}Este\ bot\ es\ para\ consultar\ informaciÃ³n\ sobre\ el\ Instituto\ TecnolÃ³gico\ de\ las\ AmÃ©ricas\ (ITLA)\ \(\backslash\)n\ \(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00033}00033\ \ \ \ \ initial\_message\ +=\ \textcolor{stringliteral}{"{}Estos\ son\ algunos\ comandos\ que\ puedes\ ejecutar:\ \(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00034}00034\ \ \ \ \ initial\_message\ +=\ \textcolor{stringliteral}{"{}/quienes\_somos\ -\/\ Conocer\ quiÃ©nes\ somos.\ \(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00035}00035\ \ \ \ \ initial\_message\ +=\ \textcolor{stringliteral}{"{}/mision\ -\/\ Conocer\ nuestra\ misiÃ³n.\ \(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00036}00036\ \ \ \ \ initial\_message\ +=\ \textcolor{stringliteral}{"{}/vision\ -\/\ Conocer\ nuestra\ visiÃ³n.\ \(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00037}00037\ \ \ \ \ initial\_message\ +=\ \textcolor{stringliteral}{"{}/valores\ -\/\ Conocer\ nuestros\ valores.\ \(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00038}00038\ \ \ \ \ initial\_message\ +=\ \textcolor{stringliteral}{"{}/historia\ -\/\ Conocer\ nuestra\ historia.\ \(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00039}00039\ \ \ \ \ initial\_message\ +=\ \textcolor{stringliteral}{"{}/rector\ -\/\ Conoce\ a\ nuestro\ rector.\ \(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00040}00040\ \ \ \ \ initial\_message\ +=\ \textcolor{stringliteral}{"{}/identidad\_corporativa\ -\/\ Colores\ y\ logos\ corporativos.\ \(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00041}00041\ \ \ \ \ initial\_message\ +=\ \textcolor{stringliteral}{"{}/calidad\_en\_la\_gestion\ -\/\ Calidad\ en\ la\ GestiÃ³n.\ \(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00042}00042\ \ \ \ \ initial\_message\ +=\ \textcolor{stringliteral}{"{}/carreras\_tecnologicas\ -\/\ Conoce\ nuestras\ carreras\ tecnolÃ³gicas.\ \(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00044}00044\ \ \ \ \ \textcolor{comment}{\#\ Responde\ al\ mensaje\ con\ el\ mensaje\ inicial}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00045}00045\ \ \ \ \ botsito.reply\_to(message,\ initial\_message)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00047}00047\ \textcolor{comment}{\#\ Manejador\ de\ mensajes\ para\ el\ comando\ /quienes\_somos}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00048}00048\ \textcolor{comment}{\#\ Lee\ el\ mensaje\ desde\ un\ archivo\ y\ lo\ envÃ­a\ como\ respuesta}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00049}00049\ \textcolor{preprocessor}{@botsito.message\_handler(commands=["{}quienes\_somos"{}])}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00050}\mbox{\hyperlink{namespacemain_a9c30753d085d5235eddb9228777a8ed2}{00050}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacemain_a9c30753d085d5235eddb9228777a8ed2}{mensaje\_quienes\_somos}}(message):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00051}00051\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00052}00052\ \textcolor{stringliteral}{\ \ \ \ Manejador\ de\ mensajes\ para\ el\ comando\ /quienes\_somos.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00053}00053\ \textcolor{stringliteral}{\ \ \ \ Lee\ el\ mensaje\ desde\ un\ archivo\ y\ lo\ envÃ­a\ como\ respuesta.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00054}00054\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00055}00055\ \ \ \ \ mensaje\ =\ read\_message\_from\_file(\textcolor{stringliteral}{"{}quienes\_somos.txt"{}})}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00056}00056\ \ \ \ \ botsito.reply\_to(message,\ mensaje)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00058}00058\ \textcolor{comment}{\#\ Manejador\ de\ mensajes\ para\ el\ comando\ /historia}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00059}00059\ \textcolor{comment}{\#\ Lee\ el\ mensaje\ desde\ un\ archivo\ y\ lo\ envÃ­a\ como\ respuesta}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00060}00060\ \textcolor{preprocessor}{@botsito.message\_handler(commands=["{}historia"{}])}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00061}\mbox{\hyperlink{namespacemain_a8740e2858bc4a3ce771071715a15ca7b}{00061}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacemain_a8740e2858bc4a3ce771071715a15ca7b}{mensaje\_historia}}(message):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00062}00062\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00063}00063\ \textcolor{stringliteral}{\ \ \ \ Manejador\ de\ mensajes\ para\ el\ comando\ /historia.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00064}00064\ \textcolor{stringliteral}{\ \ \ \ Lee\ el\ mensaje\ desde\ un\ archivo\ y\ lo\ envÃ­a\ como\ respuesta.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00065}00065\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00066}00066\ \ \ \ \ mensaje\ =\ read\_message\_from\_file(\textcolor{stringliteral}{"{}historia.txt"{}})}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00067}00067\ \ \ \ \ botsito.reply\_to(message,\ mensaje)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00069}00069\ \textcolor{comment}{\#\ Manejador\ de\ mensajes\ para\ el\ comando\ /rector}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00070}00070\ \textcolor{comment}{\#\ Lee\ el\ mensaje\ desde\ un\ archivo\ y\ lo\ envÃ­a\ como\ respuesta}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00071}00071\ \textcolor{preprocessor}{@botsito.message\_handler(commands=["{}rector"{}])}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00072}\mbox{\hyperlink{namespacemain_aebcb882a50a42430560ee2015797839e}{00072}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacemain_aebcb882a50a42430560ee2015797839e}{mensaje\_rector}}(message):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00073}00073\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00074}00074\ \textcolor{stringliteral}{\ \ \ \ Manejador\ de\ mensajes\ para\ el\ comando\ /rector.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00075}00075\ \textcolor{stringliteral}{\ \ \ \ Lee\ el\ mensaje\ desde\ un\ archivo\ y\ lo\ envÃ­a\ como\ respuesta.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00076}00076\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00077}00077\ \ \ \ \ mensaje\ =\ read\_message\_from\_file(\textcolor{stringliteral}{"{}rector.txt"{}})}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00078}00078\ \ \ \ \ botsito.reply\_to(message,\ mensaje)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00080}00080\ \textcolor{comment}{\#\ Manejador\ de\ mensajes\ para\ el\ comando\ /calidad\_en\_la\_gestion}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00081}00081\ \textcolor{comment}{\#\ Lee\ el\ mensaje\ desde\ un\ archivo\ y\ lo\ envÃ­a\ como\ respuesta}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00082}00082\ \textcolor{preprocessor}{@botsito.message\_handler(commands=["{}calidad\_en\_la\_gestion"{}])}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00083}\mbox{\hyperlink{namespacemain_a528faf326d7fc9c6cb145d18d8699c9e}{00083}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacemain_a528faf326d7fc9c6cb145d18d8699c9e}{mensaje\_calidad}}(message):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00084}00084\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00085}00085\ \textcolor{stringliteral}{\ \ \ \ Manejador\ de\ mensajes\ para\ el\ comando\ /calidad\_en\_la\_gestion.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00086}00086\ \textcolor{stringliteral}{\ \ \ \ Lee\ el\ mensaje\ desde\ un\ archivo\ y\ lo\ envÃ­a\ como\ respuesta.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00087}00087\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00088}00088\ \ \ \ \ mensaje\ =\ read\_message\_from\_file(\textcolor{stringliteral}{"{}calidad\_gestion.txt"{}})}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00089}00089\ \ \ \ \ botsito.reply\_to(message,\ mensaje)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00091}00091\ \textcolor{comment}{\#\ Manejador\ de\ mensajes\ para\ el\ comando\ /mision}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00092}00092\ \textcolor{comment}{\#\ Lee\ el\ mensaje\ desde\ un\ archivo\ y\ lo\ envÃ­a\ como\ respuesta}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00093}00093\ \textcolor{preprocessor}{@botsito.message\_handler(commands=["{}mision"{}])}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00094}\mbox{\hyperlink{namespacemain_a015ab53bc86c825e8925452ca5f4ecc8}{00094}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacemain_a015ab53bc86c825e8925452ca5f4ecc8}{mensaje\_mision}}(message):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00095}00095\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00096}00096\ \textcolor{stringliteral}{\ \ \ \ Manejador\ de\ mensajes\ para\ el\ comando\ /mision.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00097}00097\ \textcolor{stringliteral}{\ \ \ \ Lee\ el\ mensaje\ desde\ un\ archivo\ y\ lo\ envÃ­a\ como\ respuesta.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00098}00098\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00099}00099\ \ \ \ \ mensaje\ =\ read\_message\_from\_file(\textcolor{stringliteral}{"{}mision.txt"{}})}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00100}00100\ \ \ \ \ botsito.reply\_to(message,\ mensaje)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00102}00102\ \textcolor{comment}{\#\ Manejador\ de\ mensajes\ para\ el\ comando\ /vision}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00103}00103\ \textcolor{comment}{\#\ Lee\ el\ mensaje\ desde\ un\ archivo\ y\ lo\ envÃ­a\ como\ respuesta}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00104}00104\ \textcolor{preprocessor}{@botsito.message\_handler(commands=["{}vision"{}])}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00105}\mbox{\hyperlink{namespacemain_aed83553ddb11676b11038a019d78980d}{00105}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacemain_aed83553ddb11676b11038a019d78980d}{mensaje\_vision}}(message):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00106}00106\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00107}00107\ \textcolor{stringliteral}{\ \ \ \ Manejador\ de\ mensajes\ para\ el\ comando\ /vision.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00108}00108\ \textcolor{stringliteral}{\ \ \ \ Lee\ el\ mensaje\ desde\ un\ archivo\ y\ lo\ envÃ­a\ como\ respuesta.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00109}00109\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00110}00110\ \ \ \ \ mensaje\ =\ read\_message\_from\_file(\textcolor{stringliteral}{"{}vision.txt"{}})}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00111}00111\ \ \ \ \ botsito.reply\_to(message,\ mensaje)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00113}00113\ \textcolor{comment}{\#\ Manejador\ de\ mensajes\ para\ el\ comando\ /valores}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00114}00114\ \textcolor{comment}{\#\ Lee\ el\ mensaje\ desde\ un\ archivo\ y\ lo\ envÃ­a\ como\ respuesta}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00115}00115\ \textcolor{preprocessor}{@botsito.message\_handler(commands=["{}valores"{}])}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00116}\mbox{\hyperlink{namespacemain_a19764669b6f21f15d0e748067982881c}{00116}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacemain_a19764669b6f21f15d0e748067982881c}{mensaje\_valores}}(message):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00117}00117\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00118}00118\ \textcolor{stringliteral}{\ \ \ \ Manejador\ de\ mensajes\ para\ el\ comando\ /valores.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00119}00119\ \textcolor{stringliteral}{\ \ \ \ Lee\ el\ mensaje\ desde\ un\ archivo\ y\ lo\ envÃ­a\ como\ respuesta.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00120}00120\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00121}00121\ \ \ \ \ mensaje\ =\ read\_message\_from\_file(\textcolor{stringliteral}{"{}valores.txt"{}})}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00122}00122\ \ \ \ \ botsito.reply\_to(message,\ mensaje)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00124}00124\ \textcolor{comment}{\#\ Manejador\ de\ mensajes\ para\ el\ comando\ /carreras\_tecnologicas}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00125}00125\ \textcolor{comment}{\#\ Lee\ el\ mensaje\ desde\ un\ archivo\ y\ lo\ envÃ­a\ como\ respuesta}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00126}00126\ \textcolor{preprocessor}{@botsito.message\_handler(commands=["{}carreras\_tecnologicas"{}])}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00127}00127\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacemain_a19764669b6f21f15d0e748067982881c}{mensaje\_valores}}(message):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00128}00128\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00129}00129\ \textcolor{stringliteral}{\ \ \ \ Manejador\ de\ mensajes\ para\ el\ comando\ /carreras\_tecnologicas.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00130}00130\ \textcolor{stringliteral}{\ \ \ \ Lee\ el\ mensaje\ desde\ un\ archivo\ y\ lo\ envÃ­a\ como\ respuesta.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00131}00131\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00132}00132\ \ \ \ \ mensaje\ =\ read\_message\_from\_file(\textcolor{stringliteral}{"{}carreras.txt"{}})}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00133}00133\ \ \ \ \ botsito.reply\_to(message,\ mensaje)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00135}00135\ \textcolor{comment}{\#\ Manejador\ de\ mensajes\ para\ el\ comando\ /identidad\_corporativa}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00136}00136\ \textcolor{comment}{\#\ EnvÃ­a\ colores\ corporativos\ y\ logos\ corporativos\ como\ respuesta}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00137}00137\ \textcolor{preprocessor}{@botsito.message\_handler(commands=["{}identidad\_corporativa"{}])}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00138}\mbox{\hyperlink{namespacemain_a5dd2da0228024bc605ae8e6ab71505a2}{00138}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacemain_a5dd2da0228024bc605ae8e6ab71505a2}{identidad\_corporativa}}(message):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00139}00139\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00140}00140\ \textcolor{stringliteral}{\ \ \ \ Manejador\ de\ mensajes\ para\ el\ comando\ /identidad\_corporativa.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00141}00141\ \textcolor{stringliteral}{\ \ \ \ EnvÃ­a\ colores\ corporativos\ y\ logos\ corporativos\ como\ respuesta.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00142}00142\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00143}00143\ \ \ \ \ \textcolor{comment}{\#\ EnvÃ­a\ un\ mensaje\ con\ los\ colores\ corporativos}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00144}00144\ \ \ \ \ colores\ =\ \textcolor{stringliteral}{"{}Colores\ Corporativos:\ \(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00145}00145\ \ \ \ \ colores\ +=\ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00146}00146\ \textcolor{stringliteral}{\#023877}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00147}00147\ \textcolor{stringliteral}{2R\ 56G\ 119B}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00148}00148\ \textcolor{stringliteral}{100C\ 87M\ 27Y\ 12K}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00149}00149\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00150}00150\ \textcolor{stringliteral}{\#E52229}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00151}00151\ \textcolor{stringliteral}{229R\ 34G\ 41B}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00152}00152\ \textcolor{stringliteral}{4C\ 99M\ 95Y\ 0K}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00153}00153\ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00154}00154\ \ \ \ \ botsito.send\_message(message.chat.id,\ colores)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00156}00156\ \ \ \ \ \textcolor{comment}{\#\ EnvÃ­a\ un\ grupo\ de\ medios\ que\ contienen\ imÃ¡genes\ con\ subtÃ­tulos}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00157}00157\ \ \ \ \ image\_paths\ =\ [\textcolor{stringliteral}{"{}images/logo-\/full-\/itla-\/preview.jpg"{}},\ \textcolor{stringliteral}{"{}images/logo-\/fondo-\/blanco-\/preview-\/1.jpg"{}},\ \textcolor{stringliteral}{"{}images/logo-\/fondo-\/azul-\/preview-\/1.jpg"{}}]}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00158}00158\ \ \ \ \ media\ =\ []}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00159}00159\ \ \ \ \ \textcolor{keywordflow}{for}\ index,\ path\ \textcolor{keywordflow}{in}\ enumerate(image\_paths):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00160}00160\ \ \ \ \ \ \ \ \ \textcolor{keyword}{with}\ open(path,\ \textcolor{stringliteral}{'rb'})\ \textcolor{keyword}{as}\ img:}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ media.append(telebot.types.InputMediaPhoto(img.read(),\ caption=f\textcolor{stringliteral}{"{}Logo\ ITLA\ \{index\ +\ 1\}"{}}))}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00163}00163\ \ \ \ \ botsito.send\_media\_group(message.chat.id,\ media)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00165}00165\ \textcolor{comment}{\#\ Manejador\ de\ mensajes\ para\ completar\ comandos}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00166}00166\ \textcolor{comment}{\#\ Sugerir\ comandos\ similares\ si\ el\ comando\ ingresado\ no\ es\ vÃ¡lido}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00167}00167\ \textcolor{preprocessor}{@botsito.message\_handler(func=lambda\ message:\ True)}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00168}\mbox{\hyperlink{namespacemain_ad5f419af9d4c63e645dac2430c67b2a1}{00168}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacemain_ad5f419af9d4c63e645dac2430c67b2a1}{autocomplete\_commands}}(message):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00169}00169\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00170}00170\ \textcolor{stringliteral}{\ \ \ \ Manejador\ de\ mensajes\ para\ completar\ comandos.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00171}00171\ \textcolor{stringliteral}{\ \ \ \ Sugerir\ comandos\ similares\ si\ el\ comando\ ingresado\ no\ es\ vÃ¡lido.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00172}00172\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00173}00173\ \ \ \ \ \textcolor{comment}{\#\ Convierte\ el\ texto\ del\ mensaje\ en\ minÃºsculas}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00174}00174\ \ \ \ \ text\ =\ message.text.lower()}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00176}00176\ \ \ \ \ \textcolor{comment}{\#\ Encuentra\ comandos\ sugeridos\ que\ coincidan\ con\ el\ texto\ del\ mensaje}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00177}00177\ \ \ \ \ suggested\_commands\ =\ [cmd\ \textcolor{keywordflow}{for}\ cmd\ \textcolor{keywordflow}{in}\ available\_commands\ \textcolor{keywordflow}{if}\ cmd.startswith(text)]}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00179}00179\ \ \ \ \ \textcolor{comment}{\#\ Si\ hay\ comandos\ sugeridos,\ responde\ con\ ellos}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00180}00180\ \ \ \ \ \textcolor{keywordflow}{if}\ suggested\_commands:}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00181}00181\ \ \ \ \ \ \ \ \ reply\ =\ \textcolor{stringliteral}{"{}Quisiste\ decir:\ "{}}\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}.join(suggested\_commands)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00182}00182\ \ \ \ \ \ \ \ \ botsito.reply\_to(message,\ reply)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00183}00183\ \ \ \ \ \textcolor{comment}{\#\ Si\ no\ hay\ comandos\ sugeridos,\ responde\ con\ un\ mensaje\ predeterminado}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00184}00184\ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00185}00185\ \ \ \ \ \ \ \ \ default\_message\ =\ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00186}00186\ \textcolor{stringliteral}{Ejecuta\ uno\ de\ estos\ comandos:}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00187}00187\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00188}00188\ \textcolor{stringliteral}{/quienes\_somos\ -\/\ Conocer\ quiÃ©nes\ somos.\ }}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00189}00189\ \textcolor{stringliteral}{/mision\ -\/\ Conocer\ nuestra\ misiÃ³n.\ }}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00190}00190\ \textcolor{stringliteral}{/vision\ -\/\ Conocer\ nuestra\ visiÃ³n.\ }}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00191}00191\ \textcolor{stringliteral}{/valores\ -\/\ Conocer\ nuestros\ valores.\ }}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00192}00192\ \textcolor{stringliteral}{/historia\ -\/\ Conocer\ nuestra\ historia.\ }}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00193}00193\ \textcolor{stringliteral}{/rector\ -\/\ Conoce\ a\ nuestro\ rector.\ }}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00194}00194\ \textcolor{stringliteral}{/identidad\_corporativa\ -\/\ Colores\ y\ logos\ corporativos.\ }}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00195}00195\ \textcolor{stringliteral}{/calidad\_en\_la\_gestion\ -\/\ Calidad\ en\ la\ GestiÃ³n.\ }}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00196}00196\ \textcolor{stringliteral}{/carreras\_tecnologicas\ -\/\ Conoce\ nuestras\ carreras\ tecnolÃ³gicas.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00197}00197\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00198}00198\ \ \ \ \ \ \ \ \ botsito.reply\_to(message,\ default\_message)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00200}00200\ \textcolor{comment}{\#\ Inicia\ el\ bot\ para\ escuchar\ mensajes\ entrantes}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00201}00201\ \textcolor{keywordflow}{if}\ \_\_name\_\_\ ==\ \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00202}\mbox{\hyperlink{namespacemain_a970c2b7d3b39e9f6ea549a9c6a5e3896}{00202}}\ \ \ \ \ botsito.polling(none\_stop=\textcolor{keyword}{True})}
+
+\end{DoxyCode}

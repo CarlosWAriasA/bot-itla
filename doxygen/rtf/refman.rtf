@@ -1,0 +1,851 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\info 
+{\title {\comment Telegram Chat Bot  {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+1 \par
+}}Telegram Chat Bot}
+{\comment Generado por doxygen 1.10.0.}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\vertalc\qc\par\par\par\par\par\par\par
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt Telegram Chat Bot}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\par
+\par\par\par\par\par\par\par\par\par\par\par\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+Versi\'F3n 1\par\page\page\vertalt
+\pard\plain 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Tabla de contenidos\par
+\pard\plain \par
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+\sect \sbkpage \pgndec \pgnrestart
+\sect \sectd \sbknone
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\'CDndice de espacios de nombres\par \pard\plain 
+{\tc \v \'CDndice de espacios de nombres}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Lista de paquetes\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Estos son los paquetes con breves descripciones (si est\'E1n disponibles):}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b file_reader} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b main} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAG \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\'CDndice de archivos\par \pard\plain 
+{\tc \v \'CDndice de archivos}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Lista de archivos\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Lista de todos los archivos con breves descripciones:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b C:/Users/carlo/PycharmProjects/telegram-bot/{\b file_reader.py} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b C:/Users/carlo/PycharmProjects/telegram-bot/{\b main.py} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAD \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Documentaci\'F3n de espacios de nombres\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del espacio de nombres file_reader\par \pard\plain 
+{\tc\tcl2 \v file_reader}
+{\xe \v file_reader}
+{\bkmkstart AAAAAAAAAE}
+{\bkmkend AAAAAAAAAE}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b read_message_from_file} (filename)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de funciones\par
+\pard\plain 
+{\xe \v read_message_from_file\:file_reader}
+{\xe \v file_reader\:read_message_from_file}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+file_reader.read_message_from_file (  {\i filename})}}
+\par
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 1} del archivo {\b file_reader.py}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del espacio de nombres main\par \pard\plain 
+{\tc\tcl2 \v main}
+{\xe \v main}
+{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b mensaje_inicial} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b mensaje_quienes_somos} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b mensaje_historia} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b mensaje_rector} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b mensaje_calidad} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b mensaje_mision} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b mensaje_vision} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b mensaje_valores} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b identidad_corporativa} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b autocomplete_commands} (message)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b TOKEN} = os.getenv("TELEGRAM_BOT_TOKEN")\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+list {\b available_commands}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b botsito} = telebot.TeleBot({\b TOKEN})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b none_stop}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de funciones\par
+\pard\plain 
+{\xe \v autocomplete_commands\:main}
+{\xe \v main\:autocomplete_commands}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+main.autocomplete_commands (  {\i message})}}
+\par
+{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid Manejador de mensajes para completar comandos.\par
+Sugerir comandos similares si el comando ingresado no es v\'C3\'A1lido.\par
+}
+ \par
+}{
+Definici\'F3n en la l\'EDnea {\b 168} del archivo {\b main.py}.}\par
+}
+{\xe \v identidad_corporativa\:main}
+{\xe \v main\:identidad_corporativa}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+main.identidad_corporativa (  {\i message})}}
+\par
+{\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid Manejador de mensajes para el comando /identidad_corporativa.\par
+Env\'C3\'ADa colores corporativos y logos corporativos como respuesta.\par
+}
+ \par
+}{
+Definici\'F3n en la l\'EDnea {\b 138} del archivo {\b main.py}.}\par
+}
+{\xe \v mensaje_calidad\:main}
+{\xe \v main\:mensaje_calidad}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+main.mensaje_calidad (  {\i message})}}
+\par
+{\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid Manejador de mensajes para el comando /calidad_en_la_gestion.\par
+Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta.\par
+}
+ \par
+}{
+Definici\'F3n en la l\'EDnea {\b 83} del archivo {\b main.py}.}\par
+}
+{\xe \v mensaje_historia\:main}
+{\xe \v main\:mensaje_historia}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+main.mensaje_historia (  {\i message})}}
+\par
+{\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid Manejador de mensajes para el comando /historia.\par
+Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta.\par
+}
+ \par
+}{
+Definici\'F3n en la l\'EDnea {\b 61} del archivo {\b main.py}.}\par
+}
+{\xe \v mensaje_inicial\:main}
+{\xe \v main\:mensaje_inicial}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+main.mensaje_inicial (  {\i message})}}
+\par
+{\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid Manejador de mensajes para los comandos /help y /start.\par
+Responde con un mensaje inicial que describe el bot y los comandos disponibles.\par
+}
+ \par
+}{
+Definici\'F3n en la l\'EDnea {\b 25} del archivo {\b main.py}.}\par
+}
+{\xe \v mensaje_mision\:main}
+{\xe \v main\:mensaje_mision}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+main.mensaje_mision (  {\i message})}}
+\par
+{\bkmkstart AAAAAAAAAM}
+{\bkmkend AAAAAAAAAM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid Manejador de mensajes para el comando /mision.\par
+Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta.\par
+}
+ \par
+}{
+Definici\'F3n en la l\'EDnea {\b 94} del archivo {\b main.py}.}\par
+}
+{\xe \v mensaje_quienes_somos\:main}
+{\xe \v main\:mensaje_quienes_somos}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+main.mensaje_quienes_somos (  {\i message})}}
+\par
+{\bkmkstart AAAAAAAAAN}
+{\bkmkend AAAAAAAAAN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid Manejador de mensajes para el comando /quienes_somos.\par
+Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta.\par
+}
+ \par
+}{
+Definici\'F3n en la l\'EDnea {\b 50} del archivo {\b main.py}.}\par
+}
+{\xe \v mensaje_rector\:main}
+{\xe \v main\:mensaje_rector}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+main.mensaje_rector (  {\i message})}}
+\par
+{\bkmkstart AAAAAAAAAO}
+{\bkmkend AAAAAAAAAO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid Manejador de mensajes para el comando /rector.\par
+Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta.\par
+}
+ \par
+}{
+Definici\'F3n en la l\'EDnea {\b 72} del archivo {\b main.py}.}\par
+}
+{\xe \v mensaje_valores\:main}
+{\xe \v main\:mensaje_valores}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+main.mensaje_valores (  {\i message})}}
+\par
+{\bkmkstart AAAAAAAAAP}
+{\bkmkend AAAAAAAAAP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid Manejador de mensajes para el comando /valores.\par
+Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta.\par
+}
+\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid Manejador de mensajes para el comando /carreras_tecnologicas.\par
+Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta.\par
+}
+ \par
+}{
+Definici\'F3n en la l\'EDnea {\b 116} del archivo {\b main.py}.}\par
+}
+{\xe \v mensaje_vision\:main}
+{\xe \v main\:mensaje_vision}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+main.mensaje_vision (  {\i message})}}
+\par
+{\bkmkstart AAAAAAAAAQ}
+{\bkmkend AAAAAAAAAQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid Manejador de mensajes para el comando /vision.\par
+Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta.\par
+}
+ \par
+}{
+Definici\'F3n en la l\'EDnea {\b 105} del archivo {\b main.py}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de variables\par
+\pard\plain 
+{\xe \v available_commands\:main}
+{\xe \v main\:available_commands}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+list main.available_commands}}
+\par
+{\bkmkstart AAAAAAAAAR}
+{\bkmkend AAAAAAAAAR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Valor inicial:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 =  [\par
+00002     {\cf22 "/help"}, {\cf22 "/start"}, {\cf22 "/quienes_somos"}, {\cf22 "/mision"}, {\cf22 "/vision"},\par
+00003     {\cf22 "/valores"}, {\cf22 "/historia"}, {\cf22 "/rector"}, {\cf22 "/calidad_en_la_gestion"},\par
+00004     {\cf22 "/carreras_tecnologicas"}, {\cf22 "/identidad_corporativa"}\par
+00005 ]\par
+}
+{
+Definici\'F3n en la l\'EDnea {\b 13} del archivo {\b main.py}.}\par
+}
+{\xe \v botsito\:main}
+{\xe \v main\:botsito}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+main.botsito = telebot.TeleBot({\b TOKEN})}}
+\par
+{\bkmkstart AAAAAAAAAS}
+{\bkmkend AAAAAAAAAS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 20} del archivo {\b main.py}.}\par
+}
+{\xe \v none_stop\:main}
+{\xe \v main\:none_stop}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+main.none_stop}}
+\par
+{\bkmkstart AAAAAAAAAT}
+{\bkmkend AAAAAAAAAT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 202} del archivo {\b main.py}.}\par
+}
+{\xe \v TOKEN\:main}
+{\xe \v main\:TOKEN}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+main.TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")}}
+\par
+{\bkmkstart AAAAAAAAAU}
+{\bkmkend AAAAAAAAAU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 10} del archivo {\b main.py}.}\par
+}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Documentaci\'F3n de archivos{\tc \v Documentaci\'F3n de archivos}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del archivo C:/Users/carlo/PycharmProjects/telegram-bot/file_reader.py\par \pard\plain 
+{\tc\tcl2 \v C:/Users/carlo/PycharmProjects/telegram-bot/file_reader.py}
+{\xe \v C:/Users/carlo/PycharmProjects/telegram-bot/file_reader.py}
+{\bkmkstart AAAAAAAAAC}
+{\bkmkend AAAAAAAAAC}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Espacios de nombres\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\b file_reader}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b file_reader.read_message_from_file} (filename)\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+file_reader.py\par \pard\plain 
+{\tc\tcl2 \v C:/Users/carlo/PycharmProjects/telegram-bot/file_reader.py}
+{\xe \v C:/Users/carlo/PycharmProjects/telegram-bot/file_reader.py}
+{\bkmkstart AAAAAAAAAA}
+{\bkmkend AAAAAAAAAA}
+Ir a la documentaci\'F3n de este archivo.\par
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf17 def }read_message_from_file(filename):\par
+00002     {\cf17 with} open(filename, {\cf22 "r"}, encoding={\cf22 "utf-8"}) {\cf17 as} file:\par
+00003         {\cf19 return} file.read()\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del archivo C:/Users/carlo/PycharmProjects/telegram-bot/main.py\par \pard\plain 
+{\tc\tcl2 \v C:/Users/carlo/PycharmProjects/telegram-bot/main.py}
+{\xe \v C:/Users/carlo/PycharmProjects/telegram-bot/main.py}
+{\bkmkstart AAAAAAAAAD}
+{\bkmkend AAAAAAAAAD}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Espacios de nombres\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\b main}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b main.mensaje_inicial} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b main.mensaje_quienes_somos} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b main.mensaje_historia} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b main.mensaje_rector} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b main.mensaje_calidad} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b main.mensaje_mision} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b main.mensaje_vision} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b main.mensaje_valores} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b main.identidad_corporativa} (message)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b main.autocomplete_commands} (message)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b main.TOKEN} = os.getenv("TELEGRAM_BOT_TOKEN")\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+list {\b main.available_commands}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b main.botsito} = telebot.TeleBot({\b TOKEN})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b main.none_stop}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+main.py\par \pard\plain 
+{\tc\tcl2 \v C:/Users/carlo/PycharmProjects/telegram-bot/main.py}
+{\xe \v C:/Users/carlo/PycharmProjects/telegram-bot/main.py}
+{\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
+Ir a la documentaci\'F3n de este archivo.\par
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf17 import} os  {\cf20 # Importa el m\'C3\'B3dulo os para interactuar con el sistema operativo.}\par
+00002 {\cf17 from} dotenv {\cf17 import} load_dotenv  {\cf20 # Importa la funci\'C3\'B3n load_dotenv del paquete dotenv para cargar variables de entorno.}\par
+00003 {\cf17 import} telebot  {\cf20 # Importa la biblioteca telebot para interactuar con la API de Telegram.}\par
+00004 {\cf17 from} file_reader {\cf17 import} read_message_from_file  {\cf20 # Importa la funci\'C3\'B3n read_message_from_file del m\'C3\'B3dulo file_reader para leer mensajes desde archivos.}\par
+00005 \par
+00006 {\cf20 # Carga las variables de entorno desde el archivo .env}\par
+00007 load_dotenv()\par
+00008 \par
+00009 {\cf20 # Obtiene el token del bot desde las variables de entorno}\par
+00010 TOKEN = os.getenv({\cf22 "TELEGRAM_BOT_TOKEN"})\par
+00011 \par
+00012 {\cf20 # Lista de comandos disponibles para el bot}\par
+00013 available_commands = [\par
+00014     {\cf22 "/help"}, {\cf22 "/start"}, {\cf22 "/quienes_somos"}, {\cf22 "/mision"}, {\cf22 "/vision"},\par
+00015     {\cf22 "/valores"}, {\cf22 "/historia"}, {\cf22 "/rector"}, {\cf22 "/calidad_en_la_gestion"},\par
+00016     {\cf22 "/carreras_tecnologicas"}, {\cf22 "/identidad_corporativa"}\par
+00017 ]\par
+00018 \par
+00019 {\cf20 # Inicializa el bot con el token proporcionado}\par
+00020 botsito = telebot.TeleBot(TOKEN)\par
+00021 \par
+00022 {\cf20 # Manejador de mensajes para el comando /help y /start}\par
+00023 {\cf20 # Responde con un mensaje inicial que describe el bot y los comandos disponibles}\par
+00024 {\cf21 @botsito.message_handler(commands=["help", "start"])}\par
+00025 {\cf17 def }mensaje_inicial(message):\par
+00026     {\cf22 """}\par
+00027 {\cf22     Manejador de mensajes para los comandos /help y /start.}\par
+00028 {\cf22     Responde con un mensaje inicial que describe el bot y los comandos disponibles.}\par
+00029 {\cf22     """}\par
+00030     {\cf20 # Mensaje inicial que se env\'C3\'ADa al usuario al iniciar o solicitar ayuda}\par
+00031     initial_message = {\cf22 "\'C2\'A1Hola! \'C2\'BFC\'C3\'B3mo est\'C3\'A1s?\\n \\n"}\par
+00032     initial_message += {\cf22 "Este bot es para consultar informaci\'C3\'B3n sobre el Instituto Tecnol\'C3\'B3gico de las Am\'C3\'A9ricas (ITLA) \\n \\n"}\par
+00033     initial_message += {\cf22 "Estos son algunos comandos que puedes ejecutar: \\n"}\par
+00034     initial_message += {\cf22 "/quienes_somos - Conocer qui\'C3\'A9nes somos. \\n"}\par
+00035     initial_message += {\cf22 "/mision - Conocer nuestra misi\'C3\'B3n. \\n"}\par
+00036     initial_message += {\cf22 "/vision - Conocer nuestra visi\'C3\'B3n. \\n"}\par
+00037     initial_message += {\cf22 "/valores - Conocer nuestros valores. \\n"}\par
+00038     initial_message += {\cf22 "/historia - Conocer nuestra historia. \\n"}\par
+00039     initial_message += {\cf22 "/rector - Conoce a nuestro rector. \\n"}\par
+00040     initial_message += {\cf22 "/identidad_corporativa - Colores y logos corporativos. \\n"}\par
+00041     initial_message += {\cf22 "/calidad_en_la_gestion - Calidad en la Gesti\'C3\'B3n. \\n"}\par
+00042     initial_message += {\cf22 "/carreras_tecnologicas - Conoce nuestras carreras tecnol\'C3\'B3gicas. \\n"}\par
+00043 \par
+00044     {\cf20 # Responde al mensaje con el mensaje inicial}\par
+00045     botsito.reply_to(message, initial_message)\par
+00046 \par
+00047 {\cf20 # Manejador de mensajes para el comando /quienes_somos}\par
+00048 {\cf20 # Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta}\par
+00049 {\cf21 @botsito.message_handler(commands=["quienes_somos"])}\par
+00050 {\cf17 def }mensaje_quienes_somos(message):\par
+00051     {\cf22 """}\par
+00052 {\cf22     Manejador de mensajes para el comando /quienes_somos.}\par
+00053 {\cf22     Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta.}\par
+00054 {\cf22     """}\par
+00055     mensaje = read_message_from_file({\cf22 "quienes_somos.txt"})\par
+00056     botsito.reply_to(message, mensaje)\par
+00057 \par
+00058 {\cf20 # Manejador de mensajes para el comando /historia}\par
+00059 {\cf20 # Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta}\par
+00060 {\cf21 @botsito.message_handler(commands=["historia"])}\par
+00061 {\cf17 def }mensaje_historia(message):\par
+00062     {\cf22 """}\par
+00063 {\cf22     Manejador de mensajes para el comando /historia.}\par
+00064 {\cf22     Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta.}\par
+00065 {\cf22     """}\par
+00066     mensaje = read_message_from_file({\cf22 "historia.txt"})\par
+00067     botsito.reply_to(message, mensaje)\par
+00068 \par
+00069 {\cf20 # Manejador de mensajes para el comando /rector}\par
+00070 {\cf20 # Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta}\par
+00071 {\cf21 @botsito.message_handler(commands=["rector"])}\par
+00072 {\cf17 def }mensaje_rector(message):\par
+00073     {\cf22 """}\par
+00074 {\cf22     Manejador de mensajes para el comando /rector.}\par
+00075 {\cf22     Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta.}\par
+00076 {\cf22     """}\par
+00077     mensaje = read_message_from_file({\cf22 "rector.txt"})\par
+00078     botsito.reply_to(message, mensaje)\par
+00079 \par
+00080 {\cf20 # Manejador de mensajes para el comando /calidad_en_la_gestion}\par
+00081 {\cf20 # Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta}\par
+00082 {\cf21 @botsito.message_handler(commands=["calidad_en_la_gestion"])}\par
+00083 {\cf17 def }mensaje_calidad(message):\par
+00084     {\cf22 """}\par
+00085 {\cf22     Manejador de mensajes para el comando /calidad_en_la_gestion.}\par
+00086 {\cf22     Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta.}\par
+00087 {\cf22     """}\par
+00088     mensaje = read_message_from_file({\cf22 "calidad_gestion.txt"})\par
+00089     botsito.reply_to(message, mensaje)\par
+00090 \par
+00091 {\cf20 # Manejador de mensajes para el comando /mision}\par
+00092 {\cf20 # Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta}\par
+00093 {\cf21 @botsito.message_handler(commands=["mision"])}\par
+00094 {\cf17 def }mensaje_mision(message):\par
+00095     {\cf22 """}\par
+00096 {\cf22     Manejador de mensajes para el comando /mision.}\par
+00097 {\cf22     Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta.}\par
+00098 {\cf22     """}\par
+00099     mensaje = read_message_from_file({\cf22 "mision.txt"})\par
+00100     botsito.reply_to(message, mensaje)\par
+00101 \par
+00102 {\cf20 # Manejador de mensajes para el comando /vision}\par
+00103 {\cf20 # Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta}\par
+00104 {\cf21 @botsito.message_handler(commands=["vision"])}\par
+00105 {\cf17 def }mensaje_vision(message):\par
+00106     {\cf22 """}\par
+00107 {\cf22     Manejador de mensajes para el comando /vision.}\par
+00108 {\cf22     Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta.}\par
+00109 {\cf22     """}\par
+00110     mensaje = read_message_from_file({\cf22 "vision.txt"})\par
+00111     botsito.reply_to(message, mensaje)\par
+00112 \par
+00113 {\cf20 # Manejador de mensajes para el comando /valores}\par
+00114 {\cf20 # Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta}\par
+00115 {\cf21 @botsito.message_handler(commands=["valores"])}\par
+00116 {\cf17 def }mensaje_valores(message):\par
+00117     {\cf22 """}\par
+00118 {\cf22     Manejador de mensajes para el comando /valores.}\par
+00119 {\cf22     Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta.}\par
+00120 {\cf22     """}\par
+00121     mensaje = read_message_from_file({\cf22 "valores.txt"})\par
+00122     botsito.reply_to(message, mensaje)\par
+00123 \par
+00124 {\cf20 # Manejador de mensajes para el comando /carreras_tecnologicas}\par
+00125 {\cf20 # Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta}\par
+00126 {\cf21 @botsito.message_handler(commands=["carreras_tecnologicas"])}\par
+00127 {\cf17 def }mensaje_valores(message):\par
+00128     {\cf22 """}\par
+00129 {\cf22     Manejador de mensajes para el comando /carreras_tecnologicas.}\par
+00130 {\cf22     Lee el mensaje desde un archivo y lo env\'C3\'ADa como respuesta.}\par
+00131 {\cf22     """}\par
+00132     mensaje = read_message_from_file({\cf22 "carreras.txt"})\par
+00133     botsito.reply_to(message, mensaje)\par
+00134 \par
+00135 {\cf20 # Manejador de mensajes para el comando /identidad_corporativa}\par
+00136 {\cf20 # Env\'C3\'ADa colores corporativos y logos corporativos como respuesta}\par
+00137 {\cf21 @botsito.message_handler(commands=["identidad_corporativa"])}\par
+00138 {\cf17 def }identidad_corporativa(message):\par
+00139     {\cf22 """}\par
+00140 {\cf22     Manejador de mensajes para el comando /identidad_corporativa.}\par
+00141 {\cf22     Env\'C3\'ADa colores corporativos y logos corporativos como respuesta.}\par
+00142 {\cf22     """}\par
+00143     {\cf20 # Env\'C3\'ADa un mensaje con los colores corporativos}\par
+00144     colores = {\cf22 "Colores Corporativos: \\n"}\par
+00145     colores += {\cf22 """}\par
+00146 {\cf22 #023877}\par
+00147 {\cf22 2R 56G 119B}\par
+00148 {\cf22 100C 87M 27Y 12K}\par
+00149 {\cf22 }\par
+00150 {\cf22 #E52229}\par
+00151 {\cf22 229R 34G 41B}\par
+00152 {\cf22 4C 99M 95Y 0K}\par
+00153 {\cf22 """}\par
+00154     botsito.send_message(message.chat.id, colores)\par
+00155 \par
+00156     {\cf20 # Env\'C3\'ADa un grupo de medios que contienen im\'C3\'A1genes con subt\'C3\'ADtulos}\par
+00157     image_paths = [{\cf22 "images/logo-full-itla-preview.jpg"}, {\cf22 "images/logo-fondo-blanco-preview-1.jpg"}, {\cf22 "images/logo-fondo-azul-preview-1.jpg"}]\par
+00158     media = []\par
+00159     {\cf19 for} index, path {\cf19 in} enumerate(image_paths):\par
+00160         {\cf17 with} open(path, {\cf22 'rb'}) {\cf17 as} img:\par
+00161             media.append(telebot.types.InputMediaPhoto(img.read(), caption=f{\cf22 "Logo ITLA \{index + 1\}"}))\par
+00162 \par
+00163     botsito.send_media_group(message.chat.id, media)\par
+00164 \par
+00165 {\cf20 # Manejador de mensajes para completar comandos}\par
+00166 {\cf20 # Sugerir comandos similares si el comando ingresado no es v\'C3\'A1lido}\par
+00167 {\cf21 @botsito.message_handler(func=lambda message: True)}\par
+00168 {\cf17 def }autocomplete_commands(message):\par
+00169     {\cf22 """}\par
+00170 {\cf22     Manejador de mensajes para completar comandos.}\par
+00171 {\cf22     Sugerir comandos similares si el comando ingresado no es v\'C3\'A1lido.}\par
+00172 {\cf22     """}\par
+00173     {\cf20 # Convierte el texto del mensaje en min\'C3\'BAsculas}\par
+00174     text = message.text.lower()\par
+00175 \par
+00176     {\cf20 # Encuentra comandos sugeridos que coincidan con el texto del mensaje}\par
+00177     suggested_commands = [cmd {\cf19 for} cmd {\cf19 in} available_commands {\cf19 if} cmd.startswith(text)]\par
+00178 \par
+00179     {\cf20 # Si hay comandos sugeridos, responde con ellos}\par
+00180     {\cf19 if} suggested_commands:\par
+00181         reply = {\cf22 "Quisiste decir: "} + {\cf22 "\\n"}.join(suggested_commands)\par
+00182         botsito.reply_to(message, reply)\par
+00183     {\cf20 # Si no hay comandos sugeridos, responde con un mensaje predeterminado}\par
+00184     {\cf19 else}:\par
+00185         default_message = {\cf22 """}\par
+00186 {\cf22 Ejecuta uno de estos comandos:}\par
+00187 {\cf22 }\par
+00188 {\cf22 /quienes_somos - Conocer qui\'C3\'A9nes somos. }\par
+00189 {\cf22 /mision - Conocer nuestra misi\'C3\'B3n. }\par
+00190 {\cf22 /vision - Conocer nuestra visi\'C3\'B3n. }\par
+00191 {\cf22 /valores - Conocer nuestros valores. }\par
+00192 {\cf22 /historia - Conocer nuestra historia. }\par
+00193 {\cf22 /rector - Conoce a nuestro rector. }\par
+00194 {\cf22 /identidad_corporativa - Colores y logos corporativos. }\par
+00195 {\cf22 /calidad_en_la_gestion - Calidad en la Gesti\'C3\'B3n. }\par
+00196 {\cf22 /carreras_tecnologicas - Conoce nuestras carreras tecnol\'C3\'B3gicas.}\par
+00197 {\cf22         """}\par
+00198         botsito.reply_to(message, default_message)\par
+00199 \par
+00200 {\cf20 # Inicia el bot para escuchar mensajes entrantes}\par
+00201 {\cf19 if} __name__ == {\cf22 "__main__"}:\par
+00202     botsito.polling(none_stop={\cf17 True})\par
+}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \'CDndice\par 
+\pard\plain 
+{\tc \v \'CDndice}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}
